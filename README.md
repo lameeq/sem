@@ -1,2 +1,2 @@
 sem
-![workflow](https://github.com/<UserName>/<RepositoryName>/actions/workflows/main.yml/badge.svg)
+![workflow](https://github.com/lameeq/sem/actions/workflows/main.yml/badge.svg)
