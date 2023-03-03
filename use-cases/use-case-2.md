@@ -8,7 +8,7 @@ As an *HR advisor* I want *to produce a report on the salary of employees in a d
 
 ### Scope
 
-Company.
+Department.
 
 ### Level
 
@@ -20,11 +20,11 @@ We know the role.  Database contains current employee salary data.
 
 ### Success End Condition
 
-HR advisor can decide whether to give them a promotion or not.
+A report is available for HR to provide to finance.
 
 ### Failed End Condition
 
-HR advisor fails to see the employee's details.
+No report is produced.
 
 ### Primary Actor
 
@@ -38,12 +38,13 @@ A request for finance information is sent to HR.
 
 1. Finance request salary information for employees in a given department.
 2. HR advisor captures name of the department to get employees' salary information for.
-3. HR advisor extracts current salary information of all employees of the given role.
+3. HR advisor extracts current salary information of employees of the given department.
 4. HR advisor provides report to finance.
 
 ## EXTENSIONS
 
-None.
+Department does not exist:
+  HR advisor informs finance that such department does not exist.
 
 ## SUB-VARIATIONS
 
