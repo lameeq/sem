@@ -16,7 +16,7 @@ Primary task.
 
 ### Preconditions
 
-We know the role.  Database contains current employee salary data.
+We know the role.  Database contains current employee details.
 
 ### Success End Condition
 
@@ -24,7 +24,7 @@ HR advisor can decide whether to give them a promotion or not.
 
 ### Failed End Condition
 
-No report is produced.
+HR advisor fails to see the employee's details.
 
 ### Primary Actor
 
