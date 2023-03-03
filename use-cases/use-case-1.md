@@ -36,7 +36,7 @@ A request for finance information is sent to HR.
 
 ## MAIN SUCCESS SCENARIO
 
-1. Finance request salary information for a given role.
+1. Finance request salary information for all employees.
 2. HR advisor extracts current salary information of all employees.
 3. HR advisor provides report to finance.
 
