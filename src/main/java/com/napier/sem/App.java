@@ -1,7 +1,5 @@
 package com.napier.sem;
 
-
-
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -72,7 +70,9 @@ public class App
         }
     }
 
-
+    /**
+     * launch code via connect and disconnect fucntion.
+     */
 
     public static void main(String[] args)
     {
