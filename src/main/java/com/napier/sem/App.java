@@ -25,7 +25,7 @@ public class App
             System.out.println("Could not load SQL driver");
             System.exit(-1);
         }
-
+        /*check*/
         int retries = 10;
         for (int i = 0; i < retries; ++i)
         {
