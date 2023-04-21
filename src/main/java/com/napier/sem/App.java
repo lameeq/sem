@@ -123,4 +123,9 @@ public class App {
     {
         return null;
     }
+
+
+    public Employee getEmployee(int i) {
+        return null;
+    }
 }
