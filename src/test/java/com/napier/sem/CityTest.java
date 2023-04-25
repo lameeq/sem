@@ -1,9 +1,10 @@
 package com.napier.sem;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * This Class Tests for the City Data Model to verify that the correct data is
  * stored in the structs correctly.

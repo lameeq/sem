@@ -1,13 +1,14 @@
 package com.napier.sem;
 
-import com.napier.sem.Country;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * This Class Tests for the CountryTest Data Model to verify that the correct data is
- * stored in the structs correctly. Maybe now?
+ * stored in the structs correctly. Maybe now?NO:)
  */
 
 class CountryTest {
