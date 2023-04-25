@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * This Class Tests for the CountryTest Data Model to verify that the correct data is
- * stored in the structs correctly.
+ * stored in the structs correctly. Maybe now?
  */
 
 class CountryTest {
