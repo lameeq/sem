@@ -1,21 +1,43 @@
 package com.napier.sem;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
-/*check*/
+
 public class App {
+
     /**
-     * Connection to MySQL database.
+     * This is the main method
+     *
+     * @param args Unused.
      */
+    public static void main(String[] args) {
+        // Create new Application
+        App a = new App();
+
+        // Connect to database
+        if (args.length < 1) {
+            a.connect("localhost:3306");
+        } else {
+            a.connect(args[0]);
+        }
+
+        // Get Target City Record
+        City city = a.getCity(1);
+        a.displayCity(city);
+
+
+        a.disconnect();
+    }
+
+    //Connection to MySQL database
     private Connection con = null;
 
     /**
-     * Connect to the MySQL database.
+     * Connects to the mysql jdbc driver
      */
-    public void connect(String location, int delay) {
+    public void connect(String location) {
         try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -26,24 +48,24 @@ public class App {
 
         int retries = 10;
         for (int i = 0; i < retries; ++i) {
+
             System.out.println("Connecting to database...");
             try {
                 // Wait a bit for db to start
-                Thread.sleep(delay);
+                Thread.sleep(30000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://" + location
-                                + "/employees?allowPublicKeyRetrieval=true&useSSL=false",
-                        "root", "example");
+                con = DriverManager.getConnection("jdbc:mysql://" + location + "/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
-                System.out.println("Failed to connect to database attempt " +                                  Integer.toString(i));
+                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
             }
         }
     }
+
     /**
      * Disconnect from the MySQL database.
      */
@@ -58,74 +80,40 @@ public class App {
         }
     }
 
-    /**
-     * launch code via connect and disconnect fucntion.
-     */
 
 
-    /**
-     * _-_.
-     */
-    public static void main(String[] args) {
-        // Create new Application and connect to database
-        App a = new App();
+    public City getCity(int ID) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
 
-        if(args.length < 1){
-            a.connect("localhost:33060", 0);
-        }else{
-            a.connect(args[0], Integer.parseInt(args[1]));
-        }
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT ID, Name, CountryCode, District, Population "
+                            + "FROM city "
+                            + "WHERE ID = " + ID;
 
-        Department dept = a.getDepartment("Development");
-        ArrayList<Employee> employees = a.getSalariesByDepartment(dept);
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
 
+            // Return new employee if valid.
 
-        // Print salary report
-        a.printSalaries(employees);
-
-        // Disconnect from database
-        a.disconnect();
-    }
-
-    /**
-     * Prints a list of employees.
-     *
-     * @param employees The list of employees to print.
-     */
-    public void printSalaries(ArrayList<Employee> employees) {
-
-        // Check employees is not null
-        if (employees == null) {
-            System.out.println("No employees");
-            return;
-        }
-        // Print header
-        System.out.println(String.format("%-10s %-15s %-20s %-8s", "Emp No", "First Name", "Last Name", "Salary"));
-        // Loop over all employees in the list
-        for (Employee emp : employees) {
-
-            if (emp == null)
-                continue;
-
-            String emp_string =
-                    String.format("%-10s %-15s %-20s %-8s",
-                            emp.emp_no, emp.first_name, emp.last_name, emp.salary);
-            System.out.println(emp_string);
+            // Check one is returned
+            if (rset.next()) {
+                return new City(rset.getInt("ID"), rset.getString("Name"), rset.getString("CountryCode"), rset.getString("District"), rset.getInt("Population"));
+            } else
+                return null;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get target City");
+            return null;
         }
     }
 
-    public Department getDepartment(String dept_name)
-    {
 
-        return null;
-    }
-    public ArrayList<Employee> getSalariesByDepartment(Department dept)
-    {
-        return null;
-    }
-
-
-    public Employee getEmployee(int i) {
-        return null;
+    public void displayCity(City city) {
+        if (city != null) {
+            System.out.println(city.toString());
+        }
     }
 }
