@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * This Class Tests for the CountryTest Data Model to verify that the correct data is
- * stored in the structs correctly. Maybe now?NO:)
+ * This Class Tests for the CountryTest
+ *
  */
 
 class CountryTest {

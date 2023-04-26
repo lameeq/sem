@@ -7,8 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * This Class Tests for the Language Data Model to verify that the correct data is
- * stored in the structs correctly.
+ * This Class Tests for the Language
+ *
  */
 
 class LanguageTest {

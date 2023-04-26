@@ -10,10 +10,10 @@ public class Language {
     /**
      * Class Constructor:
      *
-     * @param countryCode
-     * @param languageName
-     * @param isOfficial
-     * @param percentage
+     *
+     *
+     *
+     *
      */
     public Language(String countryCode, String languageName, String isOfficial, double percentage) {
         this.countryCode = countryCode;
@@ -23,26 +23,26 @@ public class Language {
     }
 
     /**
-     * @return The language name
+     * The language name
      */
     public String getCountryCode() {return countryCode; }
 
     /**
-     * @return The language name
+     * The language name
      */
     public String getLanguageName() {
         return languageName;
     }
 
     /**
-     * @return Whether its official
+     * Whether its official
      */
     public String isOfficial() {
         return isOfficial;
     }
 
     /**
-     * @return The percentage of people who speak it
+     * The percentage of people who speak it
      */
     public double getPercentage() {
         return percentage;

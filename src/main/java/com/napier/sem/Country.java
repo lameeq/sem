@@ -49,105 +49,105 @@ public class Country {
     // Class Getters:
 
     /**
-     * @return The ISO 3166-1 alpha-3 country code
+     * The ISO 3166-1 alpha-3 country code
      */
     public String getISO3Code() {
         return ISO3Code;
     }
 
     /**
-     * @return The name of the country
+     * The name of the country
      */
     public String getName() {
         return name;
     }
 
     /**
-     * @return The continent of the country
+     * The continent of the country
      */
     public String getContinent() {
         return continent;
     }
 
     /**
-     * @return The geographic region of the country
+     * The geographic region of the country
      */
     public String getRegion() {
         return region;
     }
 
     /**
-     * @return The surface area of the country
+     * The surface area of the country
      */
     public double getSurfaceArea() {
         return surfaceArea;
     }
 
     /**
-     * @return The independence year
+     * The independence year
      */
     public int getIndependenceYear() {
         return independenceYear;
     }
 
     /**
-     * @return The population of the country
+     * The population of the country
      */
     public int getPopulation() {
         return population;
     }
 
     /**
-     * @return The life expectancy of the country
+     * The life expectancy of the country
      */
     public double getLifeExpectancy() {
         return lifeExpectancy;
     }
 
     /**
-     *  @return The GNP (Gross National Product) of the country
+     *  The GNP (Gross National Product) of the country
      */
     public double getGNP() {
         return GNP;
     }
 
     /**
-     *  @return The old GNP (Gross National Product) of the country
+     *  The old GNP (Gross National Product) of the country
      */
     public double getGNPOld() {
         return GNPOld;
     }
 
     /**
-     *  @return The local name of the country
+     *  The local name of the country
      */
     public String getLocalName() {
         return localName;
     }
 
     /**
-     *  @return The government form of the country
+     *  The government form of the country
      */
     public String getGovernmentForm() {
         return governmentForm;
     }
 
     /**
-     *  @return The head of state of the country
+     *  The head of state of the country
      */
     public String getHeadOfState() {
         return headOfState;
     }
 
     /**
-     *  @return The capital of the country
+     *  The capital of the country
      */
     public int getCapital() {
         return capital;
     }
 
     /**
-     *  @return The ISO2Code of the country
+     *  The ISO2Code of the country
      */
     public String getISO2Code() {
         return ISO2Code;

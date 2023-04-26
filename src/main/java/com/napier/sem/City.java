@@ -18,7 +18,7 @@ public class City {
 
     /**
      *
-     * @return The unique identifier number of this city
+     * he unique identifier number of this city
      */
     public int getId() {
         return id;
@@ -26,7 +26,7 @@ public class City {
 
     /**
      *
-     * @return The name of this city
+     * The name of this city
      */
     public String getName() {
         return name;
@@ -34,7 +34,7 @@ public class City {
 
     /**
      *
-     * @return The country code of this city
+     * The country code of this city
      */
     public String getCountry_code() {
         return country_code;
@@ -42,7 +42,7 @@ public class City {
 
     /**
      *
-     * @return The district of this city
+     * The district of this city
      */
     public String getDistrict() {
         return district;
@@ -50,7 +50,7 @@ public class City {
 
     /**
      *
-     * @return The population of this city
+     * The population of this city
      */
     public int getPopulation() {
         return population;
