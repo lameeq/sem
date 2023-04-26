@@ -11,7 +11,7 @@ assignees: lameeq
 Цhen changing the code in App.java, the behavior of the program does not change in any way and it continues to run outdated code
 
 **To Reproduce**
-Steps to reproduce the behavior:
+Steps to reproduce the behaviorr:
 1. Go to 'docker-compose'
 2. Click on 'run docker'
 3. Scroll down to 'output'
