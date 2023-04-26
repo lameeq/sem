@@ -1,4 +1,4 @@
 FROM openjdk:latest
-COPY ./target/app-jar-with-dependencies.jar /tmp
+COPY ./target/sem.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "-jar", "app-jar-with-dependencies.jar", "db:3306"]
+ENTRYPOINT ["java", "-jar", "sem.jar", "db:3306", "30000"]

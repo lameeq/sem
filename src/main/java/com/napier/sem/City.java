@@ -1,69 +1,42 @@
 package com.napier.sem;
 
-
+/**
+ * Represents a city
+ */
 public class City {
-    private final int id;
-    private final String name;
-    private final String country_code;
-    private final String district;
-    private final int population;
-
-    public City(int id, String name, String country_code, String district, int population) {
-        this.id = id;
-        this.name = name;
-        this.country_code = country_code;
-        this.district = district;
-        this.population = population;
-    }
+    /**
+     * City Name
+     */
+    public String Name;
 
     /**
-     *
-     * he unique identifier number of this city
+     * City Country Code
      */
-    public int getId() {
-        return id;
-    }
+    public String CountryCode;
 
     /**
-     *
-     * The name of this city
+     * City District
      */
-    public String getName() {
-        return name;
-    }
+    public String District;
 
     /**
-     *
-     * The country code of this city
+     * City Population
      */
-    public String getCountry_code() {
-        return country_code;
-    }
+    public int Population;
 
     /**
-     *
-     * The district of this city
+     * City Continent
      */
-    public String getDistrict() {
-        return district;
-    }
+    public String Continent;
 
     /**
-     *
-     * The population of this city
+     * City Region
      */
-    public int getPopulation() {
-        return population;
-    }
+    public String Region;
 
-    @Override
-    public String toString() {
-        return "City{" +
-                "id=" + this.id +
-                ", name='" + this.name + '\'' +
-                ", country_code='" + this.country_code + '\'' +
-                ", district='" + this.district + '\'' +
-                ", population=" + this.population +
-                '}';
-    }
+    /**
+     * City Country
+     */
+    public String Country;
+
 }
