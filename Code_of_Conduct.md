@@ -6,4 +6,4 @@
 -	Honesty: Team members should be honest and transparent about their abilities and limitations. If someone cannot fulfil a task, they should let the team know as soon as possible.
 -	Conflict resolution: If a disagreement arises within the team, all members should work together to resolve it in a constructive and respectful manner.
 -	Confidentiality: Team members should keep all information related to the assessment confidential and not share it with anyone outside of the team.
-By adhering to this Code of Conduct, the team will be able to work together effectively and achieve a successful outcome on their group assessment.
+By adherinddg to this Code of Conduct, the team will be able to work together effectively and achieve a successful outcome on their group assessment.
