@@ -10,13 +10,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AppIntegrationTest
 {
-    static App app;
+    public static App app;
 
     @BeforeAll
     static void init()
     {
         app = new App();
-        app.connect("localhost:33060", 30000);
+        app.connect("0.0.0.0:33060", 1000);
 
     }
 
@@ -26,35 +26,35 @@ public class AppIntegrationTest
     @Test
     void testGetAllCitiesInTheWorld(){
         ArrayList<City> cities = new ArrayList<City>();
-        cities = app.getCities("",-1);
+        cities = app.getCities("",30);
         assertNotNull(cities);
     }
     // All cities in a continent
     @Test
     void testGetAllCitiesInAContinent(){
         ArrayList<City> cities = new ArrayList<City>();
-        cities = app.getCities("country.Continent = 'North America'",-1);
+        cities = app.getCities("country.Continent = 'North America'",30);
         assertNotNull(cities);
     }
     // All cities in a region
     @Test
     void testGetAllCitiesInARegion(){
         ArrayList<City> cities = new ArrayList<City>();
-        cities = app.getCities("country.Region = 'Caribbean'",-1);
+        cities = app.getCities("country.Region = 'Caribbean'",30);
         assertNotNull(cities);
     }
     // All cities in a country
     @Test
     void testGetAllCitiesInACountry(){
         ArrayList<City> cities = new ArrayList<City>();
-        cities = app.getCities("country.Name = 'India'",-1);
+        cities = app.getCities("country.Name = 'India'",30);
         assertNotNull(cities);
     }
     // All cities in a district
     @Test
     void testGetAllCitiesInADistrict(){
         ArrayList<City> cities = new ArrayList<City>();
-        cities = app.getCities("city.District = 'Punjab'",-1);
+        cities = app.getCities("city.District = 'Punjab'",30);
         assertNotNull(cities);
     }
     // Top 5 cities in the world
@@ -104,7 +104,7 @@ public class AppIntegrationTest
     @Test
     void testGetAllCapitalCitiesInTheWorld(){
         ArrayList<City> cities = new ArrayList<City>();
-        cities = app.getCapitalCities("",-1);
+        cities = app.getCapitalCities("",30);
         assertNotNull(cities);
     }
 
@@ -112,7 +112,7 @@ public class AppIntegrationTest
     @Test
     void testGetAllCapitalCitiesInAContinent(){
         ArrayList<City> cities = new ArrayList<City>();
-        cities = app.getCapitalCities("country.Continent = 'North America'",-1);
+        cities = app.getCapitalCities("country.Continent = 'North America'",30);
         assertNotNull(cities);
     }
 
@@ -120,7 +120,7 @@ public class AppIntegrationTest
     @Test
     void testGetAllCapitalCitiesInARegion(){
         ArrayList<City> cities = new ArrayList<City>();
-        cities = app.getCapitalCities("country.Region = 'Caribbean'",-1);
+        cities = app.getCapitalCities("country.Region = 'Caribbean'",30);
         assertNotNull(cities);
     }
 
