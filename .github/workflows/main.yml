@@ -21,7 +21,7 @@ jobs:
       - name: Package and Run docker compose
         run: |
           mvn clean package -DskipTests
-          docker-compose up --build -d
+          docker-compose up --build
       - name: Show results
         run: docker logs sem_app_1
       - name: Run Unit Tests
