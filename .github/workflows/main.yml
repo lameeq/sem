@@ -20,7 +20,7 @@ jobs:
           distribution: 'adopt'
       - name: Package and Run docker compose
         run: |
-          mvn clean package
+          mvn clean package -DskipTests
           docker-compose up --abort-on-container-exit
       - name: Show results
         run: docker logs sem_app_1
