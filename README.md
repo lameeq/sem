@@ -41,5 +41,3 @@ ID | Met | Screenshots
 29 | Yes | ![image](https://user-images.githubusercontent.com/117175521/234873053-6fa8e2be-db93-4198-b6ff-546e09725e46.png)
 30 | Yes | ![image](https://user-images.githubusercontent.com/117175521/234873117-6366159a-aa82-420c-9dfd-e394401f2436.png)
 31 | Yes | ![image](https://user-images.githubusercontent.com/117175521/234873180-03a51f9b-20b4-4e77-ab0b-963d7dfdf5e8.png)
-32 | Yes | 
-
