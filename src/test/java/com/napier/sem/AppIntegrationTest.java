@@ -16,7 +16,7 @@ public class AppIntegrationTest
     static void init()
     {
         app = new App();
-        app.connect("0.0.0.0:33060", 1000);
+        app.connect("0.0.0.0:33060", 5000);
 
     }
 
