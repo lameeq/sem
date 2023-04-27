@@ -24,6 +24,10 @@ jobs:
           docker-compose up --abort-on-container-exit
       - name: Show results
         run: docker logs sem_app_1
+      - name: Run Unit Tests
+        run: mvn test -Dtest=AppTest
+      - name: Run Integration Tests
+        run: mvn test -Dtest=AppIntegrationTest
   UnitTests:
     name: Unit Tests
     runs-on: ubuntu-20.04
