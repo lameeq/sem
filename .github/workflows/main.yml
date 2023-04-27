@@ -22,6 +22,8 @@ jobs:
         run: |
           mvn package -DskipTests
           docker-compose up --abort-on-container-exit
+      - name: Show results
+        run: docker logs sem_app_1
   UnitTests:
     name: Unit Tests
     runs-on: ubuntu-20.04
@@ -53,6 +55,4 @@ jobs:
           distribution: 'adopt'
       - name: Integration Tests
         run: mvn test -Dtest=AppIntegrationTest
-
-
   
