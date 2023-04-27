@@ -117,7 +117,7 @@ public class App
                         "SELECT country.Code, country.Name, country.Continent, country.Region, country.Population, city.Name "
                                 + "FROM country, city "
                                 + "WHERE country.Capital = city.ID "
-                                + "ORDER BY Population DESC";
+                                + "ORDER BY Population DESC LIMIT 30";
             }
 
             if (clause.isEmpty() && top != -1){
@@ -135,7 +135,7 @@ public class App
                                 + "FROM country, city "
                                 + "WHERE country.Capital = city.ID AND "
                                 + clause
-                                + " ORDER BY Population DESC";
+                                + " ORDER BY Population DESC LIMIT 30";
             }
 
             if(!clause.isEmpty() && top != -1) {
@@ -272,12 +272,12 @@ public class App
             Statement stmt = con.createStatement();
             String strSelect = "";
             // Create string for SQL statement
-            if (clause.isEmpty() && top == -1){
+            if (clause.isEmpty() && top != -1){
                 strSelect =
                         "SELECT city.Name, city.CountryCode, city.District, city.Population, country.Continent, country.Region, country.Name "
                                 + "FROM city, country "
                                 + "WHERE city.CountryCode = country.Code "
-                                + "ORDER BY city.Population DESC";
+                                + "ORDER BY city.Population DESC LIMIT 30";
             }
 
             if (clause.isEmpty() && top != -1){
@@ -289,12 +289,12 @@ public class App
                                 + "LIMIT " + top;
             }
 
-            if(!clause.isEmpty() && top == -1) {
+            if(!clause.isEmpty() && top != -1) {
                 strSelect =
                         "SELECT city.Name, city.CountryCode, city.District, city.Population, country.Continent, country.Region, country.Name "
                                 + "FROM city, country "
                                 + "WHERE city.CountryCode = country.Code AND " + clause
-                                + " ORDER BY city.Population DESC";
+                                + " ORDER BY city.Population DESC LIMIT 30";
             }
 
             if(!clause.isEmpty() && top != -1) {
@@ -348,12 +348,12 @@ public class App
             Statement stmt = con.createStatement();
             String strSelect = "";
             // Create string for SQL statement
-            if (clause.isEmpty() && top == -1){
+            if (clause.isEmpty() && top != -1){
                 strSelect =
                         "SELECT city.Name, city.CountryCode, city.Population, country.Name, country.Continent, country.Region "
                                 + "FROM city, country "
                                 + "WHERE city.CountryCode = country.Code AND city.ID = country.Capital "
-                                + "ORDER BY city.Population DESC";
+                                + "ORDER BY city.Population DESC LIMIT 30";
             }
 
             if (clause.isEmpty() && top != -1){
@@ -365,12 +365,12 @@ public class App
                                 + "LIMIT " + top;
             }
 
-            if(!clause.isEmpty() && top == -1) {
+            if(!clause.isEmpty() && top != -1) {
                 strSelect =
                         "SELECT city.Name, city.CountryCode, city.Population, country.Name, country.Continent, country.Region "
                                 + "FROM city, country "
                                 + "WHERE city.CountryCode = country.Code AND city.ID = country.Capital AND " + clause
-                                + " ORDER BY city.Population DESC";
+                                + " ORDER BY city.Population DESC LIMIT 30";
             }
 
             if(!clause.isEmpty() && top != -1) {

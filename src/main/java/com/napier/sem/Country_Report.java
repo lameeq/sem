@@ -6,17 +6,17 @@ public class Country_Report {
 
         // Print all countries in the world from the largest population to smallest
         System.out.println("All countries in the world - Largest Population to Smallest:");
-        a.printCountries(a.getCountries("",-1));
+        a.printCountries(a.getCountries("",30));
         System.out.println();
 
         // Print all countries in a continent from the largest population to smallest
         System.out.println("All countries in a continent (South America) - Largest Population to Smallest:");
-        a.printCountries(a.getCountries("country.Continent = 'South America'",-1));
+        a.printCountries(a.getCountries("country.Continent = 'South America'",30));
         System.out.println();
 
         //Print all countries in a region from the largest population to smallest
         System.out.println("All countries in a region (Eastern Asia) - Largest Population to Smallest:");
-        a.printCountries(a.getCountries("country.Region = 'Eastern Asia'",-1));
+        a.printCountries(a.getCountries("country.Region = 'Eastern Asia'",30));
         System.out.println();
 
         //Print top N countries in the world from the largest population to smallest
