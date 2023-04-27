@@ -22,9 +22,10 @@ jobs:
         run: |
           mvn clean package -DskipTests
           docker-compose up --build -d
-      - name: Show results
-        run: docker logs sem_app_1
       - name: Run Unit Tests
         run: mvn test -Dtest=AppTest
       - name: Run Integration Tests
         run: mvn test -Dtest=AppIntegrationTest
+      - name: Show results
+        run: docker logs sem_app_1
+
